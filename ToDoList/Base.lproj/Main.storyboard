@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="go8-Z6-2dB" style="IBUITableViewCellStyleDefault" id="w3d-rH-9qR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="go8-Z6-2dB" imageView="NuC-LT-Qx7" style="IBUITableViewCellStyleDefault" id="w3d-rH-9qR">
                                 <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w3d-rH-9qR" id="Usa-CT-jZE">
@@ -24,12 +24,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="go8-Z6-2dB">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.666667938232422"/>
+                                            <rect key="frame" x="79" y="0.0" width="315" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="no check" id="NuC-LT-Qx7">
+                                            <rect key="frame" x="20" y="0.0" width="44" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -41,11 +45,18 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="ToDO Items" id="ET5-SS-hUn">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7uI-dD-wev">
-                            <connections>
-                                <action selector="pushAddAction:" destination="Hwy-Hx-qNd" id="K0k-rw-mfB"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="7uI-dD-wev">
+                                <connections>
+                                    <action selector="pushAddAction:" destination="Hwy-Hx-qNd" id="K0k-rw-mfB"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="edit" id="Zmq-Di-DlI">
+                                <connections>
+                                    <action selector="pushEditAction:" destination="Hwy-Hx-qNd" id="Br6-Ny-2lN"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -73,6 +84,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="no check" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

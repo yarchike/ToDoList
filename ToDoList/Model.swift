@@ -27,6 +27,11 @@ func addItem(nameItem: String, isCompeted: Bool = false){
 func removeItem(at index: Int){
     ToDoItems.remove(at: index)
 }
+func moveItem(from: Int, to: Int){
+    let fromTemp = ToDoItems[from]
+    ToDoItems.remove(at: from)
+    ToDoItems.insert(fromTemp, at: to)
+}
 
 
 func changeState(at item: Int) -> Bool{
